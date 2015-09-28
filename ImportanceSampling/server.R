@@ -73,7 +73,7 @@ shinyServer(function(input, output) {
     w3 <- function(x) 1/dbeta(x,1,20)
     f3 <- function(x) m*exp(-m*x)
     X3 <- rbeta((runif (nsim, a ,b)), 1, 20)
-    phi3=w3(X3)*2*mean(f3(X3))
+    phi3=w3(X3)*mean(f3(X3))
     estim3 <- mean (phi3)
     
     fun <- function(x) m*exp(-m*x)
